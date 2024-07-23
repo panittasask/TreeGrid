@@ -1,7 +1,7 @@
 /**
  * Test cases data source
  */
-export let sampleData: Object[] = [
+export const sampleData: Object[] = [
   {
     taskID: 1,
     taskName: 'Planning',

@@ -3,8 +3,9 @@ import {
   PageSettingsModel,
   SortSettingsModel,
 } from '@syncfusion/ej2-angular-treegrid';
-import { data } from '../models/data';
+// import { data } from '../models/data';
 import { sampleData } from '../models/dataGridText';
+import { allData } from '../models/allData';
 
 @Component({
   selector: 'app-compensation-detail',
@@ -17,7 +18,7 @@ export class CompensationDetailComponent {
   public pageSettings?: PageSettingsModel;
 
   ngOnInit(): void {
-    this.data = sampleData;
+    this.data = allData;
     this.sortSettings = {
       columns: [
         { field: 'GradingGroupName', direction: 'Ascending' },
