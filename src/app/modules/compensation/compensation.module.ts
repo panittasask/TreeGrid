@@ -8,10 +8,11 @@ import {
   TreeGridModule,
 } from '@syncfusion/ej2-angular-treegrid';
 import { BrowserModule } from '@angular/platform-browser';
+import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
 
 @NgModule({
   declarations: [CompensationDetailComponent],
-  imports: [CommonModule, BrowserModule, TreeGridModule],
+  imports: [CommonModule, BrowserModule, TreeGridModule, DropDownListModule],
   providers: [PageService, SortService, FilterService],
 })
 export class CompensationModule {}
