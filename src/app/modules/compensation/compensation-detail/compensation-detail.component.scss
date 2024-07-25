@@ -36,6 +36,8 @@ body,html {
 }
 .e-headertext{
   font-size: 13px !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
 }
 .e-grid .e-row .e-input-group .e-input.e-field {  //for edit state
 

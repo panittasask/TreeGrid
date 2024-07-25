@@ -29,25 +29,31 @@ export class CompensationDetailComponent {
   public wrapSettings: any = { wrapMode: 'Header' };
   public columnFilterSettings?: Object;
   public template?: string;
+  public filterValue?: Object;
   ngOnInit(): void {
     this.data = allData;
+
     this.sortSettings = {
       columns: [
         { field: 'GradingGroupName', direction: 'Ascending' },
         { field: 'SubGradingGroupName', direction: 'Descending' },
       ],
     };
-    this.pageSettings = { pageSize: 50 };
+    this.pageSettings = { pageSize: 5 };
     this.columnFilterSettings = {
       filterItemTemplate: this.template,
     };
-    console.log('gridtree', this.gridtree);
+    // console.log('gridtree', this.gridtree);
     this.gridtree.enableVirtualization = true;
+    this.filterSettings = { type: 'Excel' };
+    this.filterValue = {
+      type: 'CheckBox',
+    };
   }
   special(id: any) {
     console.log('id', id);
   }
-  queryCellInfo(args: any) {
+  querycellinfo(args: any) {
     if (args.data.level > 0) {
       if (args.cell.querySelector('.e-treecolumn-container') != undefined) {
         var row = args.cell.querySelector('.e-treecolumn-container');

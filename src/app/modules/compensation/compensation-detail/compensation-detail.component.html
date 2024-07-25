@@ -1,25 +1,27 @@
-<div style="margin-top: 20px">
+<div style="margin-top: 20px; overflow: hidden">
   <ejs-treegrid
     #gridTree
     [dataSource]="data"
     [treeColumnIndex]="0"
     childMapping="subtasks"
-    [allowPaging]="false"
-    height="800px"
+    [allowPaging]="true"
+    height="700px"
     width="auto"
     frozenColumns="1"
     [pageSettings]="pageSettings"
-    allowTextWrap="true"
-    [textWrapSettings]="wrapSettings"
+    allowTextWrap="false"
+    gridLines="Both"
+    [allowResizing]="true"
     allowFiltering="true"
     [filterSettings]="filterSettings"
     enableCollapseAll="true"
+    (queryCellInfo)="querycellinfo($event)"
   >
     <e-columns>
       <e-column
         field="PersonName"
         headerText="ชื่อพนักงาน"
-        width="400"
+        width="330"
         [filter]="columnFilterSettings"
       >
         <ng-template #template let-data>
@@ -46,9 +48,9 @@
           </div>
         </ng-template>
       </e-column>
-      <e-column field="PositionLevel" headerText="ระดับพนักงาน" width="140">
+      <e-column field="PositionLevel" headerText="ระดับพนักงาน" width="120">
       </e-column>
-      <e-column field="Age" headerText="อายุ" textAlign="Left" width="250">
+      <e-column field="Age" headerText="อายุ" textAlign="Left" width="200">
         <ng-template #template let-data>
           <div style="display: flex; flex-direction: column">
             <div style="flex-direction: column">

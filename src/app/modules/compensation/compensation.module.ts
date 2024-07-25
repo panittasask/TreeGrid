@@ -4,6 +4,7 @@ import { CompensationDetailComponent } from './compensation-detail/compensation-
 import {
   FilterService,
   PageService,
+  ResizeService,
   SortService,
   TreeGridModule,
 } from '@syncfusion/ej2-angular-treegrid';
@@ -13,6 +14,6 @@ import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
 @NgModule({
   declarations: [CompensationDetailComponent],
   imports: [CommonModule, BrowserModule, TreeGridModule, DropDownListModule],
-  providers: [PageService, SortService, FilterService],
+  providers: [PageService, SortService, FilterService, ResizeService],
 })
 export class CompensationModule {}
